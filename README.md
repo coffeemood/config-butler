@@ -7,7 +7,7 @@
 
 An easy way to manage native web config files in a purposeful, modularised and uniform manner. 
 
-This set up allows user to centralise the way they manage their web configuration, keep things clean and trackable across multiple environments, keeping business logic in the center while cater for a more modern approach toward configuration and development in general.
+This set up allows for a centralised way of managing web configuration, keep things clean and trackable across multiple environments.  A modern approach toward configuration which promote sound development practices and allow business logics to remain in the centre. 
 
 
 ## Installation: 
