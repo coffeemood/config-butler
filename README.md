@@ -3,12 +3,11 @@
 
 ## Introduction
 
-> A uniform and elegant way to manage multi-environment native web config files 
+*A uniform and elegant way to manage multi-environment native web config files* 
 
-Config Butler introduces an easy way to manage native web config files in a purposeful, modularised and uniform manner.
+An easy way to manage native web config files in a purposeful, modularised and uniform manner. 
 
-The philosophy behind the structure of this set up is:
-> Config should follow business logic while at the same time cater for sound development practices
+This set up allows user to centralise the way they manage their web configuration, keep things clean and trackable across multiple environments, keeping business logic in the center while cater for a more modern approach toward configuration and development in general.
 
 
 ## Installation: 
@@ -19,7 +18,7 @@ npm install config-butler
 
 ## Usage
 
-1. Create a new configuration template in your project's configuration folder with the following format 
+1. Create a **new configuration template** in your project's configuration folder with the following format 
 
 ```js
 // e.g: configurations/appConfig.js
@@ -36,8 +35,7 @@ module.exports = {
 };
 ``` 
 
-2. After you are happy with your configuration and are ready to include this in your project, create a `config-files.json` (_you can name it however you like_) 
-in the same folder, then add a new entry as the same name of the config file created. 
+2. Create a `config-files.json` (_you can name it however you like_) in the same folder, then add a new entry as the same name of the config file created. 
 
 ```js
 // configurations/config-files.json
