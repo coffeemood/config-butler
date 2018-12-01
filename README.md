@@ -1,4 +1,3 @@
-# *Config Butler* 🕴
 
 <p style="margin: 0 auto; text-align: center;">
   <img src=https://i.imgur.com/6n2blTA.png>
