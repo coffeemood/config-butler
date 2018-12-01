@@ -5,14 +5,14 @@ const { processor } = require('.');
 describe('compiler', () => {
   it('processes with env keys properly', (done) => {
     const item = {
-      uat: name.firstName(),
-      pre: name.firstName(),
+      dev: name.firstName(),
+      prod: name.firstName(),
     };
 
     processor(item, { environments: ['dev', 'prod'] }).then((res) => {
       expect(res[0]).toMatchObject({
-        uat: item.uat,
-        pre: item.pre,
+        dev: item.dev,
+        prod: item.prod,
       });
       done();
     });
@@ -20,16 +20,16 @@ describe('compiler', () => {
 
   it('processes arrays properly', (done) => {
     const item = {
-      uat: ['hello'],
-      pre: ['halo'],
+      dev: ['hello'],
+      prod: ['halo'],
     };
 
     processor(item, { environments: ['dev', 'prod'] }).then((res) => {
       expect(res[0]).toMatchObject({
-        uat: item.uat,
-        pre: item.pre,
+        dev: item.dev,
+        prod: item.prod,
       });
-      expect(Array.isArray(res[0].uat)).toBe(true);
+      expect(Array.isArray(res[0].dev)).toBe(true);
       done();
     });
   });
@@ -53,16 +53,15 @@ describe('compiler', () => {
         max: {
           minAgain: {
             maxAgain: {
-              uat: '1',
-              pre: '2',
-              prod: '3',
+              dev: '1',
+              prod: '2'
             },
           },
         },
       },
     };
     processor(item, { environments: ['dev', 'prod'] }).then((res) => {
-      expect(res[0].uat.min.max.minAgain.maxAgain).toBe(item.min.max.minAgain.maxAgain.uat);
+      expect(res[0].dev.min.max.minAgain.maxAgain).toBe(item.min.max.minAgain.maxAgain.dev);
       done();
     });
   });
