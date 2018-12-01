@@ -93,6 +93,6 @@ Arrays are considered the last object in a config, reason being arrays might be 
 
 ## Copyright and license
 
-Code and documentation copyright 2018 @[coffeemood](https://github.com/coffeemood). Code released under the MIT License. Docs released under Creative Commons.
+Code and documentation copyright 2018 @[coffeemood](https://github.com/coffeemood). Code released under the MIT License. 
 
 
