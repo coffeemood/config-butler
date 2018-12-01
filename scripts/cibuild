@@ -1,0 +1,25 @@
+#!/bin/bash -e
+
+echo "--- Setting up nvm"
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+
+echo "--- Installing yarn"
+curl -o- -L https://yarnpkg.com/install.sh | bash
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
+function test {
+  NODE_VER="$1"
+  echo "--- Switching to Node $NODE_VER"
+  nvm use "$NODE_VER" || nvm install "$NODE_VER"
+  echo "--- Installing dependencies"
+  yarn install
+  echo "--- Running tests"
+  yarn test
+}
+
+test 8
+test 10
+
+echo "--- Publishing new version"
+yarn run publish-tag

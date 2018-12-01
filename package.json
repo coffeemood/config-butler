@@ -1,0 +1,42 @@
+{
+  "name": "config-butler",
+  "version": "0.0.1",
+  "main": "index.js",
+  "repository": "git@github.com:coffeemood/config-butler.git",
+  "author": "Nam Do <coffeeforthoughts@gmail.com>",
+  "license": "UNLICENSED",
+  "engines": {
+    "node": ">=8.0.0",
+    "yarn": ">1.0.0"
+  },
+  "bin": {
+    "config-compile": "bin/config-compile.js"
+  },
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "app-root-path": "^2.1.0",
+    "lodash": "^4.17.11",
+    "mkdirp": "^0.5.1"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.8.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "2.14.0",
+    "eslint-plugin-jest": "^21.26.2",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-react": "^7.11.1",
+    "faker": "^4.1.0",
+    "husky": "1.1.2",
+    "jest": "23.6.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm test"
+    }
+  }
+}
