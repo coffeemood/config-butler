@@ -1,4 +1,4 @@
-# *Config Butler* 🕴
+# *Config Butler* 
 
 ## Introduction
 
